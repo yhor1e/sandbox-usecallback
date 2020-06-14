@@ -4,11 +4,12 @@ const App = (props) => {
   const [counter, setCounter] = useState({ value: 0, dummy: true });
 
   const cbValue1 = useCallback(() => {
+    console.log('function1 called');
     return 'counter.value (dep counter.value): ' + counter.value;
   }, [counter.value]);
   const cbValue2 = useCallback(() => {
+    console.log('function2 called');
     return 'counter.value (dep counter.dummy): ' + counter.value;
-    debugger;
   }, [counter.dummy]);
 
   let prevCbValue;

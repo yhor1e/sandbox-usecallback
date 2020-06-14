@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "4e13cf1cbb58799b5828";
+/******/ 	var hotCurrentHash = "9dd03fd4a962c1eb9bbb";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -29409,11 +29409,12 @@ var App = function App(props) {
       setCounter = _useState2[1];
 
   var cbValue1 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
+    console.log('function1 called');
     return 'counter.value (dep counter.value): ' + counter.value;
   }, [counter.value]);
   var cbValue2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
+    console.log('function2 called');
     return 'counter.value (dep counter.dummy): ' + counter.value;
-    debugger;
   }, [counter.dummy]);
   var prevCbValue;
   var prevCbDummy;
